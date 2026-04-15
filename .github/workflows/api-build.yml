@@ -1,0 +1,17 @@
+name: Build
+on: 
+    push:
+        paths: 
+            - ".github/workflows/api-build.yml"
+            - "src/**"
+    workflow_dispatch: #anual trigger
+
+jobs: 
+    build:
+        name: build java api
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - run: java --version
+            - run: mvn --version
+            - run: mvn clean install
