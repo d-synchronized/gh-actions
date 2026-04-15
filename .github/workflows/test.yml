@@ -6,8 +6,9 @@ name: test
 on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
-  schedule:
-    - cron: "*/5 * * * *"
+  #schedule:
+  #  - cron: "*/5 * * * *"
+  workflow_dispatch: # manual trigger
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
